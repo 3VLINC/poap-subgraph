@@ -5,6 +5,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
+    "create": "graph create",
     "deploy": "graph deploy",
     "postinstall": "mustache config/w3q.json subgraph.template.yaml > subgraph.yaml && npm run codegen && npm run build"
   },
