@@ -6,7 +6,7 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy",
-    "postinstall": "mustache config/w3q.json subgraph.template.yaml > subgraph.yaml"
+    "postinstall": "mustache config/w3q.json subgraph.template.yaml > subgraph.yaml && npm run graph codegen && npm run graph build"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.18.0",
