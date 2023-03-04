@@ -3,5 +3,5 @@
   "address": "0x0Ad2Cc7A2193540AABE743029F45bC1023f13FC4",
   "startBlock": 5453900,
   "file": "XPoap",
-  "tokenEvent": "EventToken(uint256,uint256)"
+  "tokenEvent": "EventToken(indexed uint256,uint256)"
 }
