@@ -9,9 +9,7 @@
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.18.0",
-    "@graphprotocol/graph-ts": "0.18.0"
-  },
-  "devDependencies": {
+    "@graphprotocol/graph-ts": "0.18.0",
     "mustache": "^4.2.0"
   }
 }
