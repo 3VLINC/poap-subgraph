@@ -8,7 +8,7 @@ dataSources:
     name: Poap
     network: mainnet
     source:
-      address: "0x0Ad2Cc7A2193540AABE743029F45bC1023f13FC4"
+      address: "0xFe335aD053f72dd084C43594AED8922a1B841d47"
       abi: Poap
       startBlock: 5453900
     mapping:
