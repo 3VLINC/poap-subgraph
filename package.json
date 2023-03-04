@@ -5,6 +5,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
+    "deploy": "graph deploy",
     "postinstall": "mustache config/w3q.json subgraph.template.yaml > subgraph.yaml"
   },
   "dependencies": {
