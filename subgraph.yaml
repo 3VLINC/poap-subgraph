@@ -1,4 +1,4 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 description: POAP
 repository: https://github.com/3VLINC/poap-subgraph-w3q
 schema:
@@ -6,23 +6,23 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Poap
-    network: {{ network }}
+    network: mainnet
     source:
-      address: "{{ address }}"
+      address: "0x0Ad2Cc7A2193540AABE743029F45bC1023f13FC4"
       abi: Poap
-      startBlock: {{ startBlock }}
+      startBlock: 5453900
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - EventToken
         - Transfer
       abis:
         - name: Poap
-          file: ./abis/{{ file }}.json
+          file: ./abis/XPoap.json
       eventHandlers:
-        - event: {{ tokenEvent }}
+        - event: EventToken(indexed uint256,uint256)
           handler: handleEventToken
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
