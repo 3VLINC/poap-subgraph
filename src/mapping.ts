@@ -38,10 +38,12 @@ export function handleEventToken(ev: EventTokenEvent): void
   event.tokenCount    += BigInt.fromI32(1);
   event.tokenMints    += BigInt.fromI32(1);
   event.transferCount += BigInt.fromI32(1);
-  token.event         = event.id;
-  token.mintOrder   = event.tokenMints;
+  if (token != null) {
+    token.event         = event.id;
+    token.mintOrder   = event.tokenMints;
+    token.save();
+  }
   event.save();
-  token.save();
 }
 
 export function handleTransfer(ev: TransferEvent): void {
@@ -78,7 +80,7 @@ export function handleTransfer(ev: TransferEvent): void {
   token.transferCount += BigInt.fromI32(1);
   token.save();
 
-  let event = Event.load(token.event);
+  let event = Event.load(token.event as string);
 
   if(event != null) {
     // Add one transfer
